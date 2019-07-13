@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-areas: "navbar navbar"
+                         "select select"
+                         "tabla tabla";
+    justify-items: center;                        
+}
+.title-and-select{
+    grid-area: select;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11vh;
+}
+.grupos{
+    padding: 10px;
+    width: 25vh;
+    margin: 10px 0;
+    font-size: 1.1em;
+    box-shadow: 1px 1px 5px #a8a8a8;
+}
+.asistencia{
+    grid-area: tabla;
+    width: 95vw;
+    border: 2px rgb(110, 110, 110) solid;
+    margin-top: 2vh;
+}
+.table-head{
+    background: #dedede;
+}
+.table-data{
+    font-size: 1.1em;
+    margin: 5px;
+    text-align: center;
+    height: 35px;
+}
+.label-radio{
+    color: rgb(223, 57, 6);
+    display: inline-block;
+    padding: 5px 15px 5px 45px;
+    position: relative;
+    border-radius: 3px;
+    transition: all 300ms ease;
+    z-index: 50;
+}
+.label-radio::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 3px rgb(223, 57, 6) solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    z-index: 50;
+}
+.radio-btn{
+    display: none;
+}
+.radio-btn:checked + .label-radio{
+    padding: 5px 15px;
+    background: rgb(223, 57, 6);
+    color: white;
+}
+.radio-btn:checked + .label-radio::before{
+    display: none;
+}

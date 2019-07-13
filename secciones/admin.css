@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1fr, 2);
+    grid-template-areas: "navbar navbar"
+                         "select select"
+                         "tab-admin tab-admin"
+                         "info info";
+    justify-items: center;                        
+}
+.title-and-select{
+    grid-area: select;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11vh;
+}
+.grupos{
+    padding: 10px;
+    width: 25vh;
+    margin: 10px 0;
+    font-size: 1.1em;
+    box-shadow: 1px 1px 5px #a8a8a8;
+}
+
+.tabla-admin{
+    grid-area: tab-admin;
+    width: 95%;
+    border: 1px black solid;
+}
+.tabla-admin-des{
+    display: none;
+}
+.head-admin{
+    background: #dedede;
+}
+.data{
+    padding: 10px;
+}
+.id-admin, .field-admin{
+    text-align: center;
+    padding: 5px;
+}
+.name-tb{
+    text-decoration: none;
+    color: rgb(47, 47, 148);
+}
+.btn-baja{
+    outline: none;
+    background: #fff;
+    color: rgb(233, 57, 57);
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border: 1px rgb(233, 57, 57) solid;
+}
+.btn-baja:active{
+    background: rgb(233, 57, 57);
+    color: white;
+    transition: all 300ms ease;
+}
+
+/*Sub tabla*/
+.sub-tablas-rep{
+    display: none;
+}
+.sub-tablas-active{
+    grid-area: tab-admin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.boton-atras{
+    text-decoration: none;
+    font-size: 1.3em;
+    align-self: flex-start;
+    margin: 10px;
+    color: rgb(233, 57, 57);
+}
+
+.info-reporte{
+    margin: 12px 0;
+    border: 1px black solid;
+    box-shadow: 0px 0px 7px rgb(168, 168, 168);
+}
+.observaciones{
+    width: 95%;
+    border: 1px black solid;
+    box-shadow: 0px 0px 7px rgb(168, 168, 168);
+}
+.obs-title{
+    width: 100%;
+    background: rgb(219, 219, 219);
+    padding: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.obs-campo{
+    font-size: 1.1em;
+    padding: 5px;
+}
