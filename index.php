@@ -1,3 +1,27 @@
+<?php
+require "conexion.php";
+session_start();
+//$usuario = "";
+//$password = "";
+
+if(isset($_POST['usuario']) && isset($_POST['password'])){
+    $usuario = $_POST["usuario"];
+    $password = $_POST["password"];
+
+    $query = "SELECT * FROM usuarios WHERE usuario = '".$usuario."' and password = '".$password."';";
+    echo $query;
+    $result = mysqli_query($connect, $query);
+    $array_cons = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+}
+
+if(isset($array_cons))
+{
+    $_SESSION['usuario'] = $usuario;
+    header("location: secciones/home.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +41,13 @@
         </header>
 
         <!--Formulario del login-->
-        <form action="secciones/home.html" class="login" method="POST">
+        <form action="index.php" class="login" method="post">
             <h2 class="title-login">Inicio de sesión</h2>
             <label for="usuario" class="label-login"><i class="fas fa-user"></i> Usuario</label>
             <input type="text" id="usuario" name="usuario" class="login-inp">
 
-            <label for="pass" class="label-login"><i class="fas fa-key"></i> Contraseña</label>
-            <input type="password" name="pass" id="pass" class="login-inp">
+            <label for="password" class="label-login"><i class="fas fa-key"></i> Contraseña</label>
+            <input type="password" name="password" id="password" class="login-inp">
 
             <input type="submit" value="Iniciar" class="btn-login">
         </form>
