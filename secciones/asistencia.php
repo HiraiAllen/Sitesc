@@ -27,11 +27,11 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
 
         <!--Submenu-->
         <div class="submenu" id="submenu">
-            <a href="home.html" class="submenu-item">Inicio</a>
-            <a href="asistencia.html" class="submenu-item">Pase de asistencia</a>
-            <a href="reporte.html" class="submenu-item">Generar Reportes</a>
+            <a href="home.php" class="submenu-item">Inicio</a>
+            <a href="asistencia.php" class="submenu-item">Pase de asistencia</a>
+            <a href="reporte.php" class="submenu-item">Generar Reportes</a>
             <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
-                <a href="admin.html" class="submenu-item">Administracion</a>
+                <a href="admin.php" class="submenu-item">Administracion</a>
             <?php endif ?>
             <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
