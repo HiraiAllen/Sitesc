@@ -33,7 +33,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
             <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
                 <a href="admin.html" class="submenu-item">Administracion</a>
             <?php endif ?>
-            <a href="login.html" class="submenu-item">Inicio de sesión</a>
+            <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
         <div class="title-and-select">
             <h2 class="selecciona">Seleccione un grupo</h2>
