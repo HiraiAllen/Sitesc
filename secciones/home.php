@@ -2,6 +2,7 @@
 session_start();
 
 $usuario = $_SESSION['usuario'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
 
 
 ?>
@@ -30,8 +31,10 @@ $usuario = $_SESSION['usuario'];
             <a href="home.html" class="submenu-item">Inicio</a>
             <a href="asistencia.html" class="submenu-item">Pase de asistencia</a>
             <a href="reporte.html" class="submenu-item">Generar Reportes</a>
-            <a href="admin.html" class="submenu-item">Administracion</a>
-            <a href="login.html" class="submenu-item">Inicio de sesión</a>
+            <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
+                <a href="admin.html" class="submenu-item">Administracion</a>
+            <?php endif; ?>
+            <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
 
         <!--Botones demas opciones-->
@@ -39,8 +42,9 @@ $usuario = $_SESSION['usuario'];
             <h1 class="titular">Bienvenido! <span><?php echo $usuario; ?></span></h1>
             <a href="asistencia.html" class="btn-items"> <i class="fas fa-user-friends"></i> Pase de asistencia</a>
             <a href="reporte.html" class="btn-items"> <i class="fas fa-book"></i> Generar Reportes</a>
-            <a href="admin.html" class="btn-items"><i class="fas fa-user-cog"></i> Administracion</a>
-            <a href="login.html" class="btn-items"><i class="fas fa-key"></i> Inicio de Sesión</a>
+            <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
+                <a href="admin.html" class="btn-items"><i class="fas fa-user-cog"></i> Administracion</a>
+            <?php endif; ?>
         </div>
     </div>
 
