@@ -18,6 +18,7 @@ if(isset($_POST['usuario']) && isset($_POST['password'])){
 if(isset($array_cons))
 {
     $_SESSION['usuario'] = $usuario;
+    $_SESSION['tipo_usuario'] = $array_cons["tipo_usuario"];
     header("location: secciones/home.php");
 }
 ?>
