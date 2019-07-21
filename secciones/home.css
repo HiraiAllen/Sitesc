@@ -13,8 +13,24 @@
     grid-gap: 10px;
     grid-template-columns: repeat(1fr, 2);
     grid-template-areas: "navbar navbar"
+                         "titular titular"
                          "options options";
                          
+}
+.titular{
+    display: flex;
+    grid-area: titular;
+    width: 100%;
+    height: 8vh;
+    background: rgb(109, 109, 109);
+    justify-content: center;
+    margin-top: 8.8vh;
+}
+.titular-items{
+    color: #fff;
+    padding: 2%;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 .buttons{
@@ -24,21 +40,17 @@
     align-items: center;
     width: 100vw;
     grid-area: options;
-    margin-top: 11vh;
-}
-.titular{
-    font-size: 2.2em;
 }
 .btn-items{
+    display: block;
     text-decoration: none;
     font-size: 1.6em;
     text-align: center;
     color: #000;
     margin: 20px 0 20px 0;
     padding: 10px;
-    background: #c8dad3;
-    box-shadow: 1px 1px 8px grey;
+    background: #e9e9e9;
+    box-shadow: 4px 4px 8px grey;
     border: 1px rgb(138, 138, 138) solid;
     width: 80vw;
-    border-radius: 5px;
 }

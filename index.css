@@ -13,14 +13,15 @@
     grid-gap: 10px;
     grid-template-columns: repeat(1fr, 2);
     grid-template-areas: "header header"
-                         "login login";
+                         "login login"
+                         "error error";
     justify-items: center;           
 }
 .header{
     height: 10vh;
     width: 100vw;
     grid-area: header;
-    background: #c10000;
+    background: #e42323de;
     box-shadow: 0px 0px 10px grey;
     display: flex;
     align-items: center;
@@ -38,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 25px;
-    background: rgb(63, 63, 63);
+    background: rgb(75, 75, 75);
     box-shadow: 2px 2px 10px grey;
 }
 .title-login{
@@ -47,7 +48,7 @@
     font-size: 1.5em;
     width: 100%;
     text-align: center;
-    background: #c10000de;
+    background: #e42323de;
 }
 .label-login{
     color: #fff;
@@ -76,8 +77,15 @@
     padding: 3%;
     margin-top: 20px;
     border: none;
-    background: #c10000de;
+    background: #e42323de;
     font-size: 1.25em;
     color: #fff;
     box-shadow: 1px 1px 8px rgb(77, 77, 77);
+}
+.error-msj{
+    grid-area: error;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #e42323de;
 }
