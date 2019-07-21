@@ -1,18 +1,15 @@
 <?php
 require "conexion.php";
 session_start();
-//$usuario = "";
-//$password = "";
+
 
 if(isset($_POST['usuario']) && isset($_POST['password'])){
     $usuario = $_POST["usuario"];
     $password = $_POST["password"];
 
     $query = "SELECT * FROM usuarios WHERE usuario = '".$usuario."' and password = '".$password."';";
-    echo $query;
     $result = mysqli_query($connect, $query);
     $array_cons = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
 }
 
 if(isset($array_cons))
@@ -21,6 +18,7 @@ if(isset($array_cons))
     $_SESSION['tipo_usuario'] = $array_cons["tipo_usuario"];
     header("location: secciones/home.php");
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +50,10 @@ if(isset($array_cons))
 
             <input type="submit" value="Iniciar" class="btn-login">
         </form>
+
+        <?php if($array_cons == NULL && $usuario != NULL && $password != NULL): ?>
+            <p class="error-msj">Datos incorrectos.</p>    
+        <?php endif; ?>
     </div>
 
     <script
