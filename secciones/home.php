@@ -4,7 +4,6 @@ session_start();
 $usuario = $_SESSION['usuario'];
 $tipo_usuario = $_SESSION['tipo_usuario'];
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,10 +35,13 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
             <?php endif; ?>
             <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
-
+        
+        <div class="titular">
+            <h3 class="titular-items">Usuario: <?php echo $usuario; ?></h3>
+            <h3 class="titular-items">Tipo de usuario: <?php echo $tipo_usuario; ?></h3>
+        </div>
         <!--Botones demas opciones-->
         <div class="buttons">
-            <h1 class="titular">Bienvenido! <span><?php echo $usuario; ?></span></h1>
             <a href="asistencia.php" class="btn-items"> <i class="fas fa-user-friends"></i> Pase de asistencia</a>
             <a href="reporte.php" class="btn-items"> <i class="fas fa-book"></i> Generar Reportes</a>
             <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
