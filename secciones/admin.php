@@ -31,7 +31,18 @@
         <div class="title-and-select">
             <h2 class="selecciona">Seleccione un grupo</h2>
             <select name="" class="grupos">
-                <option value="1B">1B</option>
+                    <option value="1B">1A</option>
+                    <option value="1A">1B</option>
+                    <option value="1C">1C</option>
+                    <option value="1D">1D</option>
+                    <option value="2A">2A</option>
+                    <option value="2B">2B</option>
+                    <option value="2C">2C</option>
+                    <option value="2D">2D</option>
+                    <option value="3A">3A</option>
+                    <option value="3B">3B</option>
+                    <option value="3C">3C</option>
+                    <option value="3D">3D</option>
             </select>
         </div>
         <!--Primera tabla-->
