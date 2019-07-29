@@ -1,7 +1,9 @@
 <?php
 session_start();
-
+require "../conexion.php";
 $tipo_usuario = $_SESSION['tipo_usuario'];
+error_reporting(1);
+
 ?>
 
 <!DOCTYPE html>
@@ -37,29 +39,30 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
         </div>
         <div class="title-and-select">
             <h2 class="selecciona">Seleccione un grupo</h2>
-            <select name="" class="grupos">
-                <option value="1B">1B</option>
-            </select>
-        </div>
-        <!--Tabla de asistencia-->
-        <table class="asistencia">
-            <thead class="table-head">
-                <tr>
-                    <th class="table-data">Nombre del alumno </th>
-                    <th class="table-data">Asistencia</th>
-                </tr>
-            </thead>
+            
+            <form action="asistencia.php" method="post" id="formulario" class="form-as">
+                <select name="" class="grupos" id="grupos">
+                    <option value="1B">1A</option>
+                    <option value="1A">1B</option>
+                    <option value="1C">1C</option>
+                    <option value="1D">1D</option>
+                    <option value="2A">2A</option>
+                    <option value="2B">2B</option>
+                    <option value="2C">2C</option>
+                    <option value="2D">2D</option>
+                    <option value="3A">3A</option>
+                    <option value="3B">3B</option>
+                    <option value="3C">3C</option>
+                    <option value="3D">3D</option>
+                </select>
 
-            <tbody>
-                <tr>
-                    <td class="table-data">Mauricio Hernandez Gomez</td>
-                    <td class="table-data">
-                        <input type="radio" class="radio-btn" id="radio-btn">
-                        <label for="radio-btn" class="label-radio">NO/A </label>
-                        <input type="radio" hidden> <!--Input del SI asistió-->
-                    </td>
-                </tr>
-            </tbody>
+                <input type="hidden" name="grupo_seleccionado" id="grupo_seleccionado">
+                <!--<input type="submit" class="show-data" value="Mostrar alumnos" name="btn" id="btn"> -->
+            </form>
+        </div>
+        
+        <table class="asistencia" id="asistencia">
+            <?php include "tabla_asistencia.php"; ?>
         </table>
     </div>
 
@@ -69,5 +72,6 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
     crossorigin="anonymous"></script>
 
     <script src="../submenu.js"></script>
+    <script src="ajax.js"></script>
 </body>
 </html>
