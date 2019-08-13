@@ -21,7 +21,7 @@
     height: 10vh;
     width: 100vw;
     grid-area: header;
-    background: #e42323de;
+    background: #e42323;
     box-shadow: 0px 0px 10px grey;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
     font-size: 1.5em;
     width: 100%;
     text-align: center;
-    background: #e42323de;
+    background: #e42323;
 }
 .label-login{
     color: #fff;
@@ -77,7 +77,7 @@
     padding: 3%;
     margin-top: 20px;
     border: none;
-    background: #e42323de;
+    background: #e42323;
     font-size: 1.25em;
     color: #fff;
     box-shadow: 1px 1px 8px rgb(77, 77, 77);
@@ -87,5 +87,17 @@
     text-align: center;
     font-size: 1.3em;
     font-weight: bold;
-    color: #e42323de;
+    color: #e42323;
+}
+
+@media (min-width: 440px) and (max-width: 800px){
+    .login{
+        width: 70vw;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px){
+    .login{
+        width: 55vw;
+    }
 }

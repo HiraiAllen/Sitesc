@@ -1,7 +1,7 @@
 <?php
 require "conexion.php";
 session_start();
-
+error_reporting(1);
 
 if(isset($_POST['usuario']) && isset($_POST['password'])){
     $usuario = $_POST["usuario"];
