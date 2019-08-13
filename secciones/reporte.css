@@ -26,7 +26,7 @@
     background: rgb(230, 230, 230);
     padding: 15px;
     margin-top: 11vh;
-    box-shadow: 1px 1px 10px grey;
+    box-shadow: 1px 1px 6px rgb(153, 153, 153);
 }
 .label-form{
     font-size: 1.3em;
