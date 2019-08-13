@@ -2,7 +2,7 @@
     height: 10vh;
     width: 100vw;
     grid-area: navbar;
-    background: #e42323de;
+    background: #e42323;
     box-shadow: 0px 0px 10px grey;
     display: flex;
     align-items: center;
