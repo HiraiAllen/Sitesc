@@ -42,8 +42,8 @@ error_reporting(1);
             
             <form action="asistencia.php" method="post" id="formulario" class="form-as">
                 <select name="" class="grupos" id="grupos">
-                    <option value="1B">1A</option>
-                    <option value="1A">1B</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
                     <option value="1C">1C</option>
                     <option value="1D">1D</option>
                     <option value="2A">2A</option>
