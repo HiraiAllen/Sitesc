@@ -10,35 +10,47 @@
 
 .main{
     display: grid;
-    grid-gap: 10px;
     grid-template-columns: repeat(1fr, 2);
     grid-template-areas: "navbar navbar"
-                         "titular titular"
                          "options options";
                          
 }
-.titular{
+.menu-escritorio{
+    display: none;
+    background: #eee;
+    box-shadow: 1px 1px 10px #808080;
+}
+.items-container{
     display: flex;
-    grid-area: titular;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 8vh;
-    background: rgb(109, 109, 109);
-    justify-content: center;
-    margin-top: 8.8vh;
+    height: 70%;
 }
-.titular-items{
-    color: #fff;
-    padding: 2%;
+.escritorio-item{
+    display: block;
+    width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    text-decoration: none;
+    color: #3f3f3f;
+    padding: 5%;
+    border-bottom: 1px #c3c3c3 solid;
+    border-right: 5px #ff3838 solid;
+    font-size: 1.3em;
+    margin: 2px;
 }
-
+.escritorio-item:hover{
+    border-right: 10px #ff3838 solid;
+    background: #c7c7c7;
+    transition: all ease-in-out 300ms;
+}
 .buttons{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    margin-top: 10vw;
     grid-area: options;
 }
 .btn-items{
@@ -52,5 +64,54 @@
     background: #e9e9e9;
     box-shadow: 4px 4px 8px grey;
     border: 1px rgb(138, 138, 138) solid;
-    width: 80vw;
+    width: 80%;
+}
+
+/*Responsive*/
+@media(min-width: 340px) and (max-width: 500px)
+{
+    .buttons{
+        margin-top: 23vw;
+    }
+}
+@media(min-width: 501px) and (max-width: 800px)
+{
+    .buttons{
+        margin-top: 16vw;
+    }
+}
+
+@media(min-width: 801px) and (max-width: 1199px)
+{
+    .btn-items{
+        width: 70%;
+    }
+}
+@media (min-width: 1200px){
+    .main{
+        grid-template-areas: "navbar navbar"
+                             "menu options";
+    }
+    .buttons{
+        width: 70%;
+    }
+    .btn-items{
+        width: 100%;
+    }
+    .btn-items:hover{
+        background: rgb(83, 83, 83);
+        color: #fff;
+    }
+    .menu-escritorio{
+        display: flex;
+        align-items: center;
+        grid-area: menu;
+        width: 30%;
+        position: fixed;
+        height: 100vh;
+        z-index: 80;
+    }
+    .titular-items{
+        font-size: 1em;
+    }
 }
