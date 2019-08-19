@@ -77,6 +77,19 @@ if(isset($_POST["btn_agregar"]))
             <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
 
+        <!--Menu escritorio-->
+        <div class="menu-escritorio">
+            <div class="items-container">
+                <a href="home.php" class="escritorio-item">Inicio</a>
+                <a href="asistencia.php" class="escritorio-item">Pase de asistencia</a>
+                <a href="reporte.php" class="escritorio-item">Generar Reportes</a>
+                <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
+                    <a href="admin.php" class="escritorio-item">Administracion</a>
+                <?php endif; ?>
+                <a href="../cerrar_sesion.php" class="escritorio-item">Cerrar sesión</a>
+            </div>
+        </div>
+
         <!--Formulario generador de reportes-->
         <form action="reporte.php" class="gen-reporte" method="POST">
             <label for="nombre" class="label-form">Nombre del estudiante</label>

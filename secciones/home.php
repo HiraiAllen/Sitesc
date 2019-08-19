@@ -26,7 +26,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
             </div>
         </div>
         <!--Submenu-->
-        <div class="submenu" id="submenu">
+        <div class="submenu" id="submenu"> 
             <a href="home.php" class="submenu-item">Inicio</a>
             <a href="asistencia.php" class="submenu-item">Pase de asistencia</a>
             <a href="reporte.php" class="submenu-item">Generar Reportes</a>
@@ -35,11 +35,25 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
             <?php endif; ?>
             <a href="../cerrar_sesion.php" class="submenu-item">Cerrar sesión</a>
         </div>
-        
+
+        <!--Menu escritorio-->
+        <div class="menu-escritorio">
+            <div class="items-container">
+                <a href="home.php" class="escritorio-item">Inicio</a>
+                <a href="asistencia.php" class="escritorio-item">Pase de asistencia</a>
+                <a href="reporte.php" class="escritorio-item">Generar Reportes</a>
+                <?php if($tipo_usuario != "Prefecto" && $tipo_usuario != "Profesor"): ?>
+                    <a href="admin.php" class="escritorio-item">Administracion</a>
+                <?php endif; ?>
+                <a href="../cerrar_sesion.php" class="escritorio-item">Cerrar sesión</a>
+            </div>
+        </div>
+        <!--
         <div class="titular">
             <h3 class="titular-items">Usuario: <?php echo $usuario; ?></h3>
             <h3 class="titular-items">Tipo de usuario: <?php echo $tipo_usuario; ?></h3>
         </div>
+        -->
         <!--Botones demas opciones-->
         <div class="buttons">
             <a href="asistencia.php" class="btn-items"> <i class="fas fa-user-friends"></i> Pase de asistencia</a>
