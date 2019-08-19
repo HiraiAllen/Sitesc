@@ -96,8 +96,46 @@
     }
 }
 
-@media (min-width: 801px) and (max-width: 1200px){
+@media (min-width: 801px) and (max-width: 1400px){
     .login{
-        width: 55vw;
+        width: 40vw;
+    }
+    .title-login{
+        font-size: 1.3em;
+    }
+
+    .label-login{
+        font-size: 1.2em;
+    }
+
+    .login-inp{
+        padding: 2%;
+    }
+    .btn-login{
+        font-size: 1.1em;
+        padding: 2%;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1400px){
+    .login{
+        width: 35vw;
+    }
+    .title-login{
+        font-size: 1.3em;
+    }
+
+    .label-login{
+        font-size: 1.2em;
+    }
+
+    .login-inp{
+        padding: 2%;
+    }
+    .btn-login{
+        font-size: 1.1em;
+        padding: 2%;
+        cursor: pointer;
     }
 }

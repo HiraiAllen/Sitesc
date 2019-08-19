@@ -6,7 +6,8 @@
     box-shadow: 0px 0px 10px grey;
     display: flex;
     align-items: center;
-    position: fixed
+    position: fixed;
+    z-index: 120;
 }
 .bar-btn{
     color: #fff;
@@ -47,4 +48,17 @@
 @keyframes cerrarSubMenu{
     0% {left: 0vw;}
     100% {left: -80vw;}
+}
+
+/*Responsive*/
+@media (min-width: 600px) and (max-width: 1199px){
+    .active-submenu{
+        width: 50vw;
+    }
+}
+
+@media (min-width: 1200px){
+    .bar-btn{
+        display: none;
+    }
 }
